@@ -1,0 +1,77 @@
+$color-bg: #111111;
+$color-surface: #1a1a1a;
+$color-border: #2a2a2a;
+$color-text: #cccccc;
+$color-label: #666666;
+$font-main: 'Inter', sans-serif;
+$radius: 12px;
+$animation-size: 280px;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: $color-bg;
+  font-family: $font-main;
+  color: $color-text;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 40px 20px;
+}
+
+.page-header {
+  text-align: center;
+
+  h1 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: $color-label;
+  }
+}
+
+// Animation cards
+.animation-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+.card {
+  background: $color-surface;
+  border: 1px solid $color-border;
+  border-radius: $radius;
+  padding: 24px;
+  text-align: center;
+  width: 340px;
+
+  h2 {
+    font-size: 0.75rem;
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: $color-label;
+    margin-bottom: 16px;
+  }
+
+  lottie-player {
+    width: $animation-size;
+    height: $animation-size;
+    margin: 0 auto;
+    display: block;
+  }
+}
